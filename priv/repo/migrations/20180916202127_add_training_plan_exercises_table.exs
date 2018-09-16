@@ -10,6 +10,5 @@ defmodule Discipline.Repo.Migrations.AddTrainingPlanExercisesTable do
 
       timestamps()
     end
-
   end
 end
