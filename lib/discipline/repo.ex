@@ -8,4 +8,8 @@ defmodule Discipline.Repo do
   def init(_, opts) do
     {:ok, Keyword.put(opts, :url, System.get_env("DATABASE_URL"))}
   end
+
+  def execute(sql, params) do
+    Ecto.Adapters.SQL.query!(__MODULE__, sql, params)
+  end
 end
